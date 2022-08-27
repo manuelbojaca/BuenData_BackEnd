@@ -4,9 +4,9 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'airbnb-base',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'airbnb-base',
     'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -35,7 +35,7 @@ module.exports = {
   },
   settings: {
     'import/parsers': {
-      '@tyscript-eslint/parser': ['.ts'],
+      '@typescript-eslint/parser': ['.ts'],
     },
     'import/resolver': {
       typescript: {
