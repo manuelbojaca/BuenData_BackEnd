@@ -35,7 +35,6 @@ const indexContorller = {
         name,
         birthday,
       ]);
-      console.log('User: ', user);
       res.status(200).json({ message: 'User created', data: user.rows });
     } catch (err) {
       let message;
