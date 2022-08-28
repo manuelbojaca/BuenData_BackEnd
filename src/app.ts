@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import userRoutes from '@src/routes/index.routes';
+import userRoutes from '@src/routes/user.routes';
 
 dotenv.config();
 const app: Application = express();
