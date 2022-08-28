@@ -2,6 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import userRoutes from '@src/routes/index.routes';
 
 dotenv.config();
 const app: Application = express();
@@ -11,7 +12,10 @@ app.set('port', port);
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
+
+app.use('/api/users', userRoutes);
 
 app.use('/', (_req, res) => {
   res.send('Buen Data Project Server');
