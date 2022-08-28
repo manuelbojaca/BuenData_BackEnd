@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
+import app from '@src/app';
+
 dotenv.config();
-import app from './app';
 
 function main() {
   const port = app.get('port');
